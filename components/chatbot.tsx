@@ -18,7 +18,10 @@ const ChatbotRoot = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("fixed bottom-4 right-4 z-50", className)}
+    className={cn(
+      "fixed bottom-4 right-4 left-4 z-50 flex justify-end",
+      className
+    )}
     {...props}
   />
 ));
@@ -35,8 +38,8 @@ const ChatbotTrigger = React.forwardRef<HTMLButtonElement, ChatbotTriggerProps>(
       ref={ref}
       className={cn(
         attentionText
-          ? "w-96 justify-start space-x-2 px-4 py-6" // Added py-6 for more vertical padding
-          : "rounded-full w-12 h-12", // Original circular style
+          ? "w-full max-w-96 justify-start space-x-2 px-4 py-6"
+          : "rounded-full w-12 h-12",
         "bg-primary text-primary-foreground hover:bg-primary/90",
         "transition-all duration-200 ease-out",
         "animate-in fade-in slide-in-from-bottom-2",
@@ -60,7 +63,7 @@ const ChatbotWindow = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "w-96 h-[32rem] bg-background border border-border rounded-lg shadow-lg flex flex-col",
+      "w-full max-w-96 h-[32rem] bg-background border border-border rounded-lg shadow-lg flex flex-col",
       "transition-all duration-200 ease-out",
       "origin-bottom-right",
       "animate-in fade-in slide-in-from-bottom-2",
