@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Chat Assistant
 
-## Getting Started
+A modern chatbot application built with Next.js and Vercel AI SDK.
 
-First, run the development server:
+## Features
+- Real-time chat with streaming responses
+- OpenAI Assistants API integration
+- Message history & markdown support
+- Code syntax highlighting
+- Desktop notifications & sound effects
+- Mobile-responsive UI with shadcn/ui
 
+## Quick Start
+
+1. Clone and install:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url> && cd <project-directory>
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Configure environment:
+```env
+OPENAI_API_KEY=your_api_key_here
+ASSISTANT_ID=your_assistant_id_here
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
+- Next.js, React, TypeScript
+- Vercel AI SDK
+- Tailwind CSS
+- shadcn/ui
 
-## Learn More
+## Project Structure
+```
+app/
+├── api/        # API routes
+├── components/ # React components
+├── lib/        # Utils
+└── page.tsx    # Main page
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
+PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
+MIT - See [LICENSE](LICENSE)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Support
+Open an issue or check [Vercel AI SDK docs](https://sdk.vercel.ai/docs) 
