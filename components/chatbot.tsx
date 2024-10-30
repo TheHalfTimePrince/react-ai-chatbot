@@ -430,9 +430,15 @@ export function Chatbot({
 
   useEffect(() => {
     if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
+      // Find the viewport element within the ScrollArea
+      const viewport = scrollAreaRef.current.querySelector('[data-radix-scroll-area-viewport]');
+      if (viewport) {
+        setTimeout(() => {
+          viewport.scrollTop = viewport.scrollHeight;
+        }, 100);
+      }
     }
-  }, [messages]);
+  }, [messages, status]);
 
   const toggleChatbot = () => setIsOpen(!isOpen);
 
